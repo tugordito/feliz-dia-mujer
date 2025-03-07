@@ -1,0 +1,102 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.welcome-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    width: 400px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+select, input, button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff1493;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #ff0080;
+}
+
+/* Estilos del mensaje emergente */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+    width: 350px;
+}
+
+/* Estilo especial para Kiara */
+#messageBox.kiara {
+    border: 3px solid #ffb6c1;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+}
+
+@keyframes sunflower-fall {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.sunflower {
+    position: absolute;
+    top: 0;
+    animation: sunflower-fall linear infinite;
+    opacity: 0.9;
+}
+
+.sunflower::after {
+    content: "🌻";
+}

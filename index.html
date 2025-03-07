@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Mujer</title>
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>🌸 ¡Bienvenida! 🌸</h1>
+        <p>Selecciona tu nombre para recibir un mensaje especial</p>
+        <div class="input-container">
+            <select id="nameSelect">
+                <option value="">Selecciona tu nombre</option>
+                <option value="Kiara">Kiara</option>
+                <option value="Gaby">Gaby</option>
+                <option value="Vane">Vane</option>
+            </select>
+            <input type="password" id="passwordInput" placeholder="Ingresa tu contraseña">
+            <button onclick="validatePassword()">Ingresar</button>
+        </div>
+    </div>
+
+    <!-- Mensaje emergente -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content" id="messageBox">
+            <span class="close" onclick="closeMessage()">&times;</span>
+            <p id="messageText"></p>
+        </div>
+    </div>
+
+    <script src="animo.js"></script>
+</body>
+</html>
